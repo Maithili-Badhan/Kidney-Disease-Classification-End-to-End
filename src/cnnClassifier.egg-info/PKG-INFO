@@ -1,3 +1,20 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small package for Kidney Disease Classification
+Home-page: https://github.com/Maithili-Badhan/Kidney-Disease-Classification-End-to-End
+Author: Maithili-Badhan
+Author-email: maithilibprojects@gmail.com
+Project-URL: Bug Tracker, https://github.com/Maithili-Badhan/Kidney-Disease-Classification-End-to-End/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
 # Kidney-Disease-Classification-End-to-End
 
 ## Workflows
