@@ -525,3 +525,41 @@ OSError: No file or directory found at model\model.h5
 [2025-07-29 20:42:41,424: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:41] "POST /predict HTTP/1.1" 200 -]
 [2025-07-29 20:42:50,069: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:50] "POST /predict HTTP/1.1" 200 -]
 [2025-07-29 20:42:58,313: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:58] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:47:48,614: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.174.218:8080]
+[2025-07-29 20:47:48,615: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-29 20:50:39,796: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:50:39] "GET / HTTP/1.1" 200 -]
+[2025-07-29 20:50:47,605: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\kiit\kidney-disease-classification-end-to-end\src\cnnClassifier\pipeline\prediction.py", line 19, in predict
+    test_image = image.load_img(imagename, target_size = (224,224))
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\keras\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\PIL\Image.py", line 3580, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000028D8D1712C0>
+[2025-07-29 20:50:47,751: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:50:47] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-07-29 20:51:00,394: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:51:00] "GET / HTTP/1.1" 200 -]
+[2025-07-29 20:51:28,053: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:51:28] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:51:48,938: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-29 20:51:48,944: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 20:51:48,952: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 20:51:48,955: INFO: common: created directory at: artifacts]
+[2025-07-29 20:51:48,956: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-29 20:51:48,956: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
