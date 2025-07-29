@@ -477,3 +477,51 @@ x==========x]
 [2025-07-29 20:07:26,458: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-07-29 20:38:26,829: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.174.218:8080]
+[2025-07-29 20:38:26,829: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-29 20:38:36,655: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:38:36] "GET / HTTP/1.1" 200 -]
+[2025-07-29 20:39:04,618: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\kiit\kidney-disease-classification-end-to-end\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-07-29 20:39:04,775: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:39:04] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-07-29 20:41:22,459: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.174.218:8080]
+[2025-07-29 20:41:22,459: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-29 20:41:39,394: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:41:39] "GET / HTTP/1.1" 200 -]
+[2025-07-29 20:42:03,844: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:03] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:14,036: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:14] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:20,919: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:20] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:27,053: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:27] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:33,613: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000019F8B0234C0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-07-29 20:42:33,631: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:33] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:41,420: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000019F8B023430> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2025-07-29 20:42:41,424: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:41] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:50,069: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:50] "POST /predict HTTP/1.1" 200 -]
+[2025-07-29 20:42:58,313: INFO: _internal: 127.0.0.1 - - [29/Jul/2025 20:42:58] "POST /predict HTTP/1.1" 200 -]
