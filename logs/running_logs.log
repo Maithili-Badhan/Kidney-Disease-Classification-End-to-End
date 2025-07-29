@@ -118,3 +118,362 @@ x==========x]
 [2025-07-27 17:24:46,370: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2025-07-27 18:18:14,171: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-27 18:18:14,173: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:18:14,178: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:18:14,179: INFO: common: created directory at: artifacts]
+[2025-07-27 18:18:14,180: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 18:18:14,181: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 18:20:48,228: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 18:20:50,931: INFO: main: >>>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-27 18:20:50,931: INFO: main: *******************]
+[2025-07-27 18:20:50,931: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-07-27 18:20:50,936: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:20:50,937: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:20:50,938: INFO: common: created directory at: artifacts]
+[2025-07-27 18:20:50,940: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-07-27 18:20:51,968: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-27 18:20:52,349: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-07-27 18:20:52,350: INFO: main: *******************]
+[2025-07-27 18:20:52,350: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-07-27 18:20:52,354: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:20:52,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:20:52,362: INFO: common: created directory at: artifacts]
+[2025-07-27 18:20:52,364: INFO: common: created directory at: artifacts\training]
+[2025-07-27 18:20:52,946: ERROR: main: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\main.py", line 32, in <module>
+    model_trainer.main()
+  File "c:\users\kiit\kidney-disease-classification-end-to-end\src\cnnClassifier\pipeline\stage_03_model_training.py", line 20, in main
+    training.train_valid_generator()
+  File "c:\users\kiit\kidney-disease-classification-end-to-end\src\cnnClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2025-07-27 18:24:07,634: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-27 18:24:07,636: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:24:07,640: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:24:07,641: INFO: common: created directory at: artifacts]
+[2025-07-27 18:24:07,643: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 18:24:07,643: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 18:26:02,568: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 18:26:05,109: INFO: main: >>>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-27 18:26:05,109: INFO: main: *******************]
+[2025-07-27 18:26:05,110: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-07-27 18:26:05,115: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:26:05,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:26:05,119: INFO: common: created directory at: artifacts]
+[2025-07-27 18:26:05,119: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-07-27 18:26:05,881: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-27 18:26:06,263: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-07-27 18:26:06,263: INFO: main: *******************]
+[2025-07-27 18:26:06,263: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-07-27 18:26:06,266: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:26:06,269: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:26:06,270: INFO: common: created directory at: artifacts]
+[2025-07-27 18:26:06,271: INFO: common: created directory at: artifacts\training]
+[2025-07-27 18:29:33,176: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-07-27 18:30:51,737: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:30:51,743: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:30:51,745: INFO: common: created directory at: artifacts]
+[2025-07-27 18:31:59,539: INFO: common: json file saved at: scores.json]
+[2025-07-27 18:36:43,341: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:36:43,346: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:36:43,350: INFO: common: created directory at: artifacts]
+[2025-07-27 18:37:41,169: INFO: common: json file saved at: scores.json]
+[2025-07-27 18:37:44,295: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-07-27 18:37:45,116: INFO: builder_impl: Assets written to: C:\Users\KIIT\AppData\Local\Temp\tmpsk26uc_t\model\data\model\assets]
+[2025-07-27 18:46:56,882: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:46:56,896: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:46:56,898: INFO: common: created directory at: artifacts]
+[2025-07-27 18:47:53,931: INFO: common: json file saved at: scores.json]
+[2025-07-27 18:47:57,444: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-07-27 18:47:58,155: INFO: builder_impl: Assets written to: C:\Users\KIIT\AppData\Local\Temp\tmpwammrt55\model\data\model\assets]
+[2025-07-27 18:58:57,522: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-27 18:58:57,525: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 18:58:57,541: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 18:58:57,543: INFO: common: created directory at: artifacts]
+[2025-07-27 18:58:57,546: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 18:58:57,548: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 19:04:22,629: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 19:04:25,848: INFO: main: >>>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-27 19:04:25,851: INFO: main: *******************]
+[2025-07-27 19:04:25,851: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-07-27 19:04:25,876: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 19:04:25,900: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 19:04:25,901: INFO: common: created directory at: artifacts]
+[2025-07-27 19:04:25,907: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-07-27 19:04:27,468: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-27 19:04:28,071: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-07-27 19:04:28,073: INFO: main: *******************]
+[2025-07-27 19:04:28,073: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-07-27 19:04:28,077: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 19:04:28,080: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 19:04:28,081: INFO: common: created directory at: artifacts]
+[2025-07-27 19:04:28,082: INFO: common: created directory at: artifacts\training]
+[2025-07-27 19:08:11,471: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-07-27 19:08:11,472: INFO: main: *******************]
+[2025-07-27 19:08:11,472: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-07-27 19:08:11,473: ERROR: main: name 'EvaluationPipeline' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\main.py", line 42, in <module>
+    model_evalution = EvaluationPipeline()
+NameError: name 'EvaluationPipeline' is not defined
+[2025-07-27 19:12:19,903: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-27 19:12:19,905: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 19:12:19,906: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 19:12:19,907: INFO: common: created directory at: artifacts]
+[2025-07-27 19:12:19,907: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 19:12:19,908: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 19:18:37,167: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-27 19:18:44,676: INFO: main: >>>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-27 19:18:44,676: INFO: main: *******************]
+[2025-07-27 19:18:44,676: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-07-27 19:18:44,681: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 19:18:44,685: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 19:18:44,687: INFO: common: created directory at: artifacts]
+[2025-07-27 19:18:44,688: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-07-27 19:18:46,224: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-27 19:18:50,062: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-07-27 19:18:50,063: INFO: main: *******************]
+[2025-07-27 19:18:50,063: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-07-27 19:18:50,073: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 19:18:50,077: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 19:18:50,078: INFO: common: created directory at: artifacts]
+[2025-07-27 19:18:50,081: INFO: common: created directory at: artifacts\training]
+[2025-07-27 19:26:42,165: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-07-27 19:26:42,167: INFO: main: *******************]
+[2025-07-27 19:26:42,169: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-07-27 19:26:42,210: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 19:26:42,221: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 19:26:42,226: INFO: common: created directory at: artifacts]
+[2025-07-27 19:28:55,885: INFO: common: json file saved at: scores.json]
+[2025-07-27 19:28:55,889: INFO: common: json file saved at: scores.json]
+[2025-07-27 19:28:55,891: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-07-28 19:24:20,201: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-28 19:24:20,220: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-28 19:24:20,238: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-28 19:24:20,240: INFO: common: created directory at: artifacts]
+[2025-07-28 19:24:20,242: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-28 19:24:20,244: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-28 19:24:31,410: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?export=download&id=1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000273AF2A90A0>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))]
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\socket.py", line 966, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000273AF2A90A0>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?export=download&id=1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000273AF2A90A0>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\main.py", line 11, in <module>
+    obj.main()
+  File "c:\users\kiit\kidney-disease-classification-end-to-end\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\src\cnnClassifier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\src\cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id, zip_download_dir)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?export=download&id=1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000273AF2A90A0>: Failed to resolve 'drive.google.com' ([Errno 11001] getaddrinfo failed)"))
+[2025-07-28 19:35:13,269: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-28 19:35:13,310: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-28 19:35:13,350: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-28 19:35:13,356: INFO: common: created directory at: artifacts]
+[2025-07-28 19:35:13,361: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-28 19:35:13,361: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-28 19:35:26,773: ERROR: main: HTTPSConnectionPool(host='doc-0o-04-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/7tsv4nnbtea7trco1j8hauotjscdef9p/1753711500000/10104983754527474259/*/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf?e=download&uuid=e3fbb6ae-33a1-4143-b9b2-913f3538e77b (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002FD8EA45970>: Failed to resolve 'doc-0o-04-docs.googleusercontent.com' ([Errno 11001] getaddrinfo failed)"))]
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\socket.py", line 966, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000002FD8EA45970>: Failed to resolve 'doc-0o-04-docs.googleusercontent.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='doc-0o-04-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/7tsv4nnbtea7trco1j8hauotjscdef9p/1753711500000/10104983754527474259/*/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf?e=download&uuid=e3fbb6ae-33a1-4143-b9b2-913f3538e77b (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002FD8EA45970>: Failed to resolve 'doc-0o-04-docs.googleusercontent.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\main.py", line 11, in <module>
+    obj.main()
+  File "c:\users\kiit\kidney-disease-classification-end-to-end\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\src\cnnClassifier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "C:\Users\KIIT\Kidney-Disease-Classification-End-to-End\src\cnnClassifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id, zip_download_dir)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\gdown\download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 724, in send
+    history = [resp for resp in gen]
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 724, in <listcomp>
+    history = [resp for resp in gen]
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 265, in resolve_redirects
+    resp = self.send(
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\KIIT\minianaconda\envs\kidney\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='doc-0o-04-docs.googleusercontent.com', port=443): Max retries exceeded with url: /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/7tsv4nnbtea7trco1j8hauotjscdef9p/1753711500000/10104983754527474259/*/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf?e=download&uuid=e3fbb6ae-33a1-4143-b9b2-913f3538e77b (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002FD8EA45970>: Failed to resolve 'doc-0o-04-docs.googleusercontent.com' ([Errno 11001] getaddrinfo failed)"))
+[2025-07-29 19:38:48,469: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-29 19:38:48,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 19:38:48,501: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 19:38:48,502: INFO: common: created directory at: artifacts]
+[2025-07-29 19:38:48,502: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-29 19:38:48,502: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-29 19:40:41,085: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-29 19:40:43,308: INFO: stage_01_data_ingestion: >>>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-29 19:44:25,730: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-29 19:44:25,732: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 19:44:25,734: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 19:44:25,734: INFO: common: created directory at: artifacts]
+[2025-07-29 19:44:25,734: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-29 19:44:25,734: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-29 19:46:40,536: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-29 19:46:45,719: INFO: stage_01_data_ingestion: >>>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-29 19:56:01,502: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<<]
+[2025-07-29 19:56:01,507: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 19:56:01,510: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 19:56:01,510: INFO: common: created directory at: artifacts]
+[2025-07-29 19:56:01,510: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-29 19:56:01,510: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-29 19:57:50,921: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1i0ikX2qMq4R1EyIQLLrQi_YYAWy8fKjf/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-29 19:57:53,536: INFO: data_ingestion: Extracted zip file to: artifacts/data_ingestion]
+[2025-07-29 19:57:53,542: INFO: data_ingestion: Moved Normal folder to artifacts/data_ingestion\kidney-ct-scan-image]
+[2025-07-29 19:57:53,547: INFO: data_ingestion: Moved Tumor folder to artifacts/data_ingestion\kidney-ct-scan-image]
+[2025-07-29 19:57:53,547: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<< 
+
+ x====================x]
+[2025-07-29 19:58:40,526: INFO: stage_02_prepare_base_model: *******************]
+[2025-07-29 19:58:40,526: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-07-29 19:58:40,526: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 19:58:40,539: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 19:58:40,540: INFO: common: created directory at: artifacts]
+[2025-07-29 19:58:40,540: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-07-29 19:58:41,554: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-07-29 19:58:41,967: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-07-29 19:58:54,096: INFO: stage_03_model_training: *******************]
+[2025-07-29 19:58:54,104: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-07-29 19:58:54,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 19:58:54,106: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 19:58:54,106: INFO: common: created directory at: artifacts]
+[2025-07-29 19:58:54,106: INFO: common: created directory at: artifacts\training]
+[2025-07-29 20:04:58,047: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-07-29 20:05:24,248: INFO: stage_04_model_evaluation: *******************]
+[2025-07-29 20:05:24,248: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-07-29 20:05:24,253: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-29 20:05:24,257: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-29 20:05:24,258: INFO: common: created directory at: artifacts]
+[2025-07-29 20:07:26,426: INFO: common: json file saved at: scores.json]
+[2025-07-29 20:07:26,444: INFO: common: json file saved at: scores.json]
+[2025-07-29 20:07:26,458: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
